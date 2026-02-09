@@ -1,0 +1,31 @@
+﻿restaurant_id,name,location,city,state,category,seats,avg_rating,open_date
+R001,The Purple Pig,500 N Michigan Ave,Chicago,IL,Full Service,174,4.2,7/12/23
+R002,Alinea,1723 N Halsted St,Chicago,IL,Fine Dining,154,4,11/3/21
+R003,Portillo's,100 W Ontario St,Chicago,IL,Fast Food,219,4.3,2/18/24
+R004,Girlfriend Bar,1520 W Chicago Ave,Chicago,IL,Full Service,165,4.5,5/29/22
+R005,Avec,615 W Randolph St,Chicago,IL,Full Service,31,4.5,9/14/25
+R006,Shake Shack,66 E Ohio St,Chicago,IL,Fast Food,163,4.6,1/7/23
+R007,Schwa,1466 N Ashland Ave,Chicago,IL,Fine Dining,120,4.7,3/22/21
+R008,Big Star,1531 N Lincoln Ave,Chicago,IL,Full Service,76,4.4,8/11/24
+R009,Milk Bar,3600 N Talman Ave,Chicago,IL,Fast Food,95,4.4,12/30/22
+R010,The Wiener's Circle,2252 N Lincoln Ave,Chicago,IL,Fast Food,87,4.2,4/16/25
+R011,Pizza Jukebox,1427 NW 23rd Ave,Portland,OR,Fast Food,240,4,10/5/23
+R012,Le Pigeon,738 E Burnside St,Portland,OR,Fine Dining,144,4.3,6/19/21
+R013,Screen Door,2337 E Burnside St,Portland,OR,Full Service,49,4.7,1/27/24
+R014,Andina,1314 NW Glisan St,Portland,OR,Full Service,164,3.9,9/8/22
+R015,Food Carts SE 28th,SE 28th & Stark,Portland,OR,Fast Food,178,4.6,7/21/25
+R016,Lardo,1205 SW Washington St,Portland,OR,Fast Food,192,4,3/14/23
+R017,Departure Lounge,525 SW Morrison St,Portland,OR,Full Service,74,3.9,12/2/21
+R018,Pine State Biscuits,2204 NE Alberta St,Portland,OR,Full Service,83,4.2,11/9/24
+R019,Noble Rot,1111 E Burnside St,Portland,OR,Full Service,19,4.6,4/25/22
+R020,Cartopia,SE 12th & Hawthorne,Portland,OR,Fast Food,133,4.6,2/11/25
+R021,Ostra,1 Charles St S,Boston,MA,Fine Dining,65,4.2,8/30/23
+R022,Neptune Oyster,63 Salem St,Boston,MA,Full Service,86,3.9,10/17/21
+R023,Clover Food Lab,1075 Cambridge St,Boston,MA,Fast Food,47,3.8,5/4/24
+R024,Tasty Burger,2 Brattle St,Boston,MA,Fast Food,225,4.3,7/23/22
+R025,Toro,1 Charles St S,Boston,MA,Full Service,210,3.8,1/28/25
+R026,Sweet Cheeks Q,1381 Boylston St,Boston,MA,Full Service,47,4.9,6/15/23
+R027,B&G Oysters,550 Tremont St,Boston,MA,Full Service,185,4.9,4/9/21
+R028,Pizzeria Regina,11 1/2 Thatcher St,Boston,MA,Fast Food,51,4.6,9/20/24
+R029,Committee,50 Northern Ave,Boston,MA,Full Service,143,4.2,11/6/22
+R030,The Salty Pig,130 Dartmouth St,Boston,MA,Full Service,218,4.3,3/31/25
