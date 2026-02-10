@@ -8,5 +8,5 @@ select
     category,
     seats,
     avg_rating,
-    cast(open_date as date) as go_live_date
-from main_raw.restaurants
+    strptime(open_date, '%m/%d/%y')::DATE as go_live_date
+from {{ source('main_raw', 'restaurants') }}
