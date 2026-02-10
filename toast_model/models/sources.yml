@@ -1,0 +1,17 @@
+version: 1
+
+sources:
+  - name: main_raw  # Group name
+    schema: main_raw
+    tables:
+      - name: restaurants
+        description: "Raw restaurant seed data"
+        columns:
+          - name: restaurant_id
+            description: "Unique restaurant identifier"
+      - name: transactions
+        description: "Raw transactions seed data"
+        columns:
+          - name: transaction_id
+            description: "Unique transaction identifier"
+
