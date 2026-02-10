@@ -1,12 +1,10 @@
 {{ config(materialized='view') }}
 
 select
+    transaction_id,
     restaurant_id,
-    name,
-    location,
-    city,
-    category,
-    seats,
-    avg_rating,
-    cast(open_date as date) as go_live_date
-from main_raw.restaurants
+    cast(order_date as date) as order_date,
+    total_amount,
+    tip_amount,
+    items_count
+from main_raw.transactions
