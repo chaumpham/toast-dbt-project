@@ -9,9 +9,15 @@ sources:
         columns:
           - name: restaurant_id
             description: "Unique restaurant identifier"
+            data_tests:
+              - unique
+              - not_null
       - name: transactions
         description: "Raw transactions seed data"
         columns:
           - name: transaction_id
             description: "Unique transaction identifier"
+            data_tests:
+              - unique
+              - not_null
 
