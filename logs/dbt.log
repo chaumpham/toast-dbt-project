@@ -15014,3 +15014,1059 @@ with relations AS (
 [0m14:17:26.524753 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111480e50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1123cbdf0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ffe9270>]}
 [0m14:17:26.524998 [debug] [MainThread]: Flushing usage events
 [0m14:17:26.763527 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:32:52.815388 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11165cf70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1125a0b20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1125a03d0>]}
+
+
+============================== 14:32:52.824141 | 8f8f7937-51c5-4458-a489-c9399e0ef31d ==============================
+[0m14:32:52.824141 [info ] [MainThread]: Running with dbt=1.11.3
+[0m14:32:52.824574 [debug] [MainThread]: running dbt with arguments {'cache_selected_only': 'False', 'use_colors': 'True', 'partial_parse': 'True', 'log_path': '/Users/chaupham/PycharmProjects/toast_dbt_project/logs', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'log_cache_events': 'False', 'target_path': 'None', 'invocation_command': 'dbt run', 'write_json': 'True', 'profiles_dir': '/Users/chaupham/.dbt', 'static_parser': 'True', 'version_check': 'True', 'no_print': 'None', 'debug': 'False', 'fail_fast': 'False', 'use_experimental_parser': 'False', 'send_anonymous_usage_stats': 'True', 'empty': 'False', 'introspect': 'True', 'indirect_selection': 'eager', 'log_format': 'default', 'quiet': 'False', 'warn_error': 'None'}
+[0m14:32:53.121139 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '8f8f7937-51c5-4458-a489-c9399e0ef31d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1125a6e90>]}
+[0m14:32:53.162233 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '8f8f7937-51c5-4458-a489-c9399e0ef31d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1125376d0>]}
+[0m14:32:53.163858 [info ] [MainThread]: Registered adapter: duckdb=1.10.0
+[0m14:32:53.245678 [debug] [MainThread]: checksum: 97dbd983c77ef3cec7304d97135f72c53ee20ea7ab68d67bae8e0876ff0fcdb6, vars: {}, profile: , target: , version: 1.11.3
+[0m14:32:53.378135 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m14:32:53.378427 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m14:32:53.378629 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m14:32:53.428968 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '8f8f7937-51c5-4458-a489-c9399e0ef31d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112cd3fa0>]}
+[0m14:32:53.547165 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/chaupham/PycharmProjects/toast_dbt_project/target/manifest.json
+[0m14:32:53.548971 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/chaupham/PycharmProjects/toast_dbt_project/target/semantic_manifest.json
+[0m14:32:53.563651 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '8f8f7937-51c5-4458-a489-c9399e0ef31d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112c773a0>]}
+[0m14:32:53.564031 [info ] [MainThread]: Found 2 seeds, 5 models, 10 data tests, 2 sources, 472 macros
+[0m14:32:53.564275 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8f8f7937-51c5-4458-a489-c9399e0ef31d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112bc5540>]}
+[0m14:32:53.565452 [info ] [MainThread]: 
+[0m14:32:53.565693 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m14:32:53.565886 [info ] [MainThread]: 
+[0m14:32:53.566199 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m14:32:53.570030 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_dev'
+[0m14:32:53.607781 [debug] [ThreadPool]: Using duckdb connection "list_dev"
+[0m14:32:53.608045 [debug] [ThreadPool]: On list_dev: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "toast_model", "target_name": "dev", "connection_name": "list_dev"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"dev"'
+    
+  
+  
+[0m14:32:53.608242 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:32:53.650194 [debug] [ThreadPool]: SQL status: OK in 0.041 seconds
+[0m14:32:53.651720 [debug] [ThreadPool]: On list_dev: Close
+[0m14:32:53.652181 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dev, now create_dev_main)
+[0m14:32:53.652872 [debug] [ThreadPool]: Creating schema "database: "dev"
+schema: "main"
+"
+[0m14:32:53.657772 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m14:32:53.658010 [debug] [ThreadPool]: On create_dev_main: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "toast_model", "target_name": "dev", "connection_name": "create_dev_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='dev'
+        and type='sqlite'
+    
+  
+[0m14:32:53.658203 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m14:32:53.659852 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m14:32:53.660618 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m14:32:53.660811 [debug] [ThreadPool]: On create_dev_main: BEGIN
+[0m14:32:53.661096 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m14:32:53.661286 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m14:32:53.661467 [debug] [ThreadPool]: On create_dev_main: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "toast_model", "target_name": "dev", "connection_name": "create_dev_main"} */
+
+    
+    
+        create schema if not exists "dev"."main"
+    
+[0m14:32:53.663079 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m14:32:53.663574 [debug] [ThreadPool]: On create_dev_main: COMMIT
+[0m14:32:53.663759 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m14:32:53.663927 [debug] [ThreadPool]: On create_dev_main: COMMIT
+[0m14:32:53.664190 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m14:32:53.664382 [debug] [ThreadPool]: On create_dev_main: Close
+[0m14:32:53.665353 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_dev_main, now list_dev_main)
+[0m14:32:53.669136 [debug] [ThreadPool]: Using duckdb connection "list_dev_main"
+[0m14:32:53.669347 [debug] [ThreadPool]: On list_dev_main: BEGIN
+[0m14:32:53.669520 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m14:32:53.669830 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m14:32:53.670023 [debug] [ThreadPool]: Using duckdb connection "list_dev_main"
+[0m14:32:53.670215 [debug] [ThreadPool]: On list_dev_main: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "toast_model", "target_name": "dev", "connection_name": "list_dev_main"} */
+select
+      'dev' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'dev'
+  
+[0m14:32:53.691980 [debug] [ThreadPool]: SQL status: OK in 0.022 seconds
+[0m14:32:53.693265 [debug] [ThreadPool]: On list_dev_main: ROLLBACK
+[0m14:32:53.693908 [debug] [ThreadPool]: Failed to rollback 'list_dev_main'
+[0m14:32:53.694110 [debug] [ThreadPool]: On list_dev_main: Close
+[0m14:32:53.694426 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dev_main, now list_dev_main_raw)
+[0m14:32:53.696373 [debug] [ThreadPool]: Using duckdb connection "list_dev_main_raw"
+[0m14:32:53.696571 [debug] [ThreadPool]: On list_dev_main_raw: BEGIN
+[0m14:32:53.696740 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m14:32:53.697062 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m14:32:53.697253 [debug] [ThreadPool]: Using duckdb connection "list_dev_main_raw"
+[0m14:32:53.697446 [debug] [ThreadPool]: On list_dev_main_raw: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "toast_model", "target_name": "dev", "connection_name": "list_dev_main_raw"} */
+select
+      'dev' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main_raw'
+    and lower(table_catalog) = 'dev'
+  
+[0m14:32:53.699346 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m14:32:53.700130 [debug] [ThreadPool]: On list_dev_main_raw: ROLLBACK
+[0m14:32:53.700401 [debug] [ThreadPool]: Failed to rollback 'list_dev_main_raw'
+[0m14:32:53.700585 [debug] [ThreadPool]: On list_dev_main_raw: Close
+[0m14:32:53.701129 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8f8f7937-51c5-4458-a489-c9399e0ef31d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f2ebf10>]}
+[0m14:32:53.701431 [debug] [MainThread]: Using duckdb connection "master"
+[0m14:32:53.701611 [debug] [MainThread]: On master: BEGIN
+[0m14:32:53.701777 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m14:32:53.702069 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m14:32:53.702263 [debug] [MainThread]: On master: COMMIT
+[0m14:32:53.702440 [debug] [MainThread]: Using duckdb connection "master"
+[0m14:32:53.702604 [debug] [MainThread]: On master: COMMIT
+[0m14:32:53.702856 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m14:32:53.703065 [debug] [MainThread]: On master: Close
+[0m14:32:53.704495 [debug] [Thread-1 (]: Began running node model.toast_model.stg_restaurants
+[0m14:32:53.704933 [info ] [Thread-1 (]: 1 of 5 START sql view model main.stg_restaurants ............................... [RUN]
+[0m14:32:53.705230 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_dev_main_raw, now model.toast_model.stg_restaurants)
+[0m14:32:53.705474 [debug] [Thread-1 (]: Began compiling node model.toast_model.stg_restaurants
+[0m14:32:53.711435 [debug] [Thread-1 (]: Writing injected SQL for node "model.toast_model.stg_restaurants"
+[0m14:32:53.712160 [debug] [Thread-1 (]: Began executing node model.toast_model.stg_restaurants
+[0m14:32:53.732071 [debug] [Thread-1 (]: Writing runtime sql for node "model.toast_model.stg_restaurants"
+[0m14:32:53.732859 [debug] [Thread-1 (]: Using duckdb connection "model.toast_model.stg_restaurants"
+[0m14:32:53.733103 [debug] [Thread-1 (]: On model.toast_model.stg_restaurants: BEGIN
+[0m14:32:53.733311 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:32:53.733725 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m14:32:53.733980 [debug] [Thread-1 (]: Using duckdb connection "model.toast_model.stg_restaurants"
+[0m14:32:53.734214 [debug] [Thread-1 (]: On model.toast_model.stg_restaurants: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "toast_model", "target_name": "dev", "node_id": "model.toast_model.stg_restaurants"} */
+
+  
+  create view "dev"."main"."stg_restaurants__dbt_tmp" as (
+    
+
+select
+    restaurant_id,
+    name,
+    location,
+    city,
+    category,
+    seats,
+    avg_rating,
+    strptime(open_date, '%m/%d/%y')::DATE as go_live_date
+from "dev"."main_raw"."restaurants"
+  );
+
+[0m14:32:53.736012 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m14:32:53.740624 [debug] [Thread-1 (]: Using duckdb connection "model.toast_model.stg_restaurants"
+[0m14:32:53.740883 [debug] [Thread-1 (]: On model.toast_model.stg_restaurants: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "toast_model", "target_name": "dev", "node_id": "model.toast_model.stg_restaurants"} */
+alter view "dev"."main"."stg_restaurants" rename to "stg_restaurants__dbt_backup"
+[0m14:32:53.742427 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m14:32:53.744463 [debug] [Thread-1 (]: Using duckdb connection "model.toast_model.stg_restaurants"
+[0m14:32:53.744704 [debug] [Thread-1 (]: On model.toast_model.stg_restaurants: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "toast_model", "target_name": "dev", "node_id": "model.toast_model.stg_restaurants"} */
+alter view "dev"."main"."stg_restaurants__dbt_tmp" rename to "stg_restaurants"
+[0m14:32:53.745103 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m14:32:53.752935 [debug] [Thread-1 (]: On model.toast_model.stg_restaurants: COMMIT
+[0m14:32:53.753200 [debug] [Thread-1 (]: Using duckdb connection "model.toast_model.stg_restaurants"
+[0m14:32:53.753425 [debug] [Thread-1 (]: On model.toast_model.stg_restaurants: COMMIT
+[0m14:32:53.755825 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m14:32:53.759476 [debug] [Thread-1 (]: Using duckdb connection "model.toast_model.stg_restaurants"
+[0m14:32:53.759735 [debug] [Thread-1 (]: On model.toast_model.stg_restaurants: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "toast_model", "target_name": "dev", "node_id": "model.toast_model.stg_restaurants"} */
+
+      drop view if exists "dev"."main"."stg_restaurants__dbt_backup" cascade
+    
+[0m14:32:53.761026 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m14:32:53.762633 [debug] [Thread-1 (]: On model.toast_model.stg_restaurants: Close
+[0m14:32:53.763881 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8f8f7937-51c5-4458-a489-c9399e0ef31d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110719090>]}
+[0m14:32:53.764301 [info ] [Thread-1 (]: 1 of 5 OK created sql view model main.stg_restaurants .......................... [[32mOK[0m in 0.06s]
+[0m14:32:53.764673 [debug] [Thread-1 (]: Finished running node model.toast_model.stg_restaurants
+[0m14:32:53.764931 [debug] [Thread-1 (]: Began running node model.toast_model.stg_transactions
+[0m14:32:53.765267 [info ] [Thread-1 (]: 2 of 5 START sql view model main.stg_transactions .............................. [RUN]
+[0m14:32:53.765558 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.toast_model.stg_restaurants, now model.toast_model.stg_transactions)
+[0m14:32:53.765794 [debug] [Thread-1 (]: Began compiling node model.toast_model.stg_transactions
+[0m14:32:53.767761 [debug] [Thread-1 (]: Writing injected SQL for node "model.toast_model.stg_transactions"
+[0m14:32:53.768310 [debug] [Thread-1 (]: Began executing node model.toast_model.stg_transactions
+[0m14:32:53.770705 [debug] [Thread-1 (]: Writing runtime sql for node "model.toast_model.stg_transactions"
+[0m14:32:53.771378 [debug] [Thread-1 (]: Using duckdb connection "model.toast_model.stg_transactions"
+[0m14:32:53.771615 [debug] [Thread-1 (]: On model.toast_model.stg_transactions: BEGIN
+[0m14:32:53.771825 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:32:53.772175 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m14:32:53.772408 [debug] [Thread-1 (]: Using duckdb connection "model.toast_model.stg_transactions"
+[0m14:32:53.772638 [debug] [Thread-1 (]: On model.toast_model.stg_transactions: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "toast_model", "target_name": "dev", "node_id": "model.toast_model.stg_transactions"} */
+
+  
+  create view "dev"."main"."stg_transactions__dbt_tmp" as (
+    
+
+select
+    transaction_id,
+    restaurant_id,
+    strptime(order_date, '%m/%d/%y')::DATE as order_date,
+    total_amount,
+    tip_amount,
+    items_count
+from "dev"."main_raw"."transactions"
+  );
+
+[0m14:32:53.773106 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m14:32:53.775141 [debug] [Thread-1 (]: Using duckdb connection "model.toast_model.stg_transactions"
+[0m14:32:53.775372 [debug] [Thread-1 (]: On model.toast_model.stg_transactions: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "toast_model", "target_name": "dev", "node_id": "model.toast_model.stg_transactions"} */
+alter view "dev"."main"."stg_transactions" rename to "stg_transactions__dbt_backup"
+[0m14:32:53.775730 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m14:32:53.778286 [debug] [Thread-1 (]: Using duckdb connection "model.toast_model.stg_transactions"
+[0m14:32:53.778518 [debug] [Thread-1 (]: On model.toast_model.stg_transactions: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "toast_model", "target_name": "dev", "node_id": "model.toast_model.stg_transactions"} */
+alter view "dev"."main"."stg_transactions__dbt_tmp" rename to "stg_transactions"
+[0m14:32:53.778868 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m14:32:53.779802 [debug] [Thread-1 (]: On model.toast_model.stg_transactions: COMMIT
+[0m14:32:53.780020 [debug] [Thread-1 (]: Using duckdb connection "model.toast_model.stg_transactions"
+[0m14:32:53.780221 [debug] [Thread-1 (]: On model.toast_model.stg_transactions: COMMIT
+[0m14:32:53.780643 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m14:32:53.782184 [debug] [Thread-1 (]: Using duckdb connection "model.toast_model.stg_transactions"
+[0m14:32:53.782407 [debug] [Thread-1 (]: On model.toast_model.stg_transactions: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "toast_model", "target_name": "dev", "node_id": "model.toast_model.stg_transactions"} */
+
+      drop view if exists "dev"."main"."stg_transactions__dbt_backup" cascade
+    
+[0m14:32:53.782784 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m14:32:53.783647 [debug] [Thread-1 (]: On model.toast_model.stg_transactions: Close
+[0m14:32:53.784037 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8f8f7937-51c5-4458-a489-c9399e0ef31d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110719090>]}
+[0m14:32:53.784478 [info ] [Thread-1 (]: 2 of 5 OK created sql view model main.stg_transactions ......................... [[32mOK[0m in 0.02s]
+[0m14:32:53.784854 [debug] [Thread-1 (]: Finished running node model.toast_model.stg_transactions
+[0m14:32:53.785568 [debug] [Thread-1 (]: Began running node model.toast_model.mart_daily_revenue
+[0m14:32:53.785925 [info ] [Thread-1 (]: 3 of 5 START sql table model main.mart_daily_revenue ........................... [RUN]
+[0m14:32:53.786205 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.toast_model.stg_transactions, now model.toast_model.mart_daily_revenue)
+[0m14:32:53.786438 [debug] [Thread-1 (]: Began compiling node model.toast_model.mart_daily_revenue
+[0m14:32:53.788760 [debug] [Thread-1 (]: Writing injected SQL for node "model.toast_model.mart_daily_revenue"
+[0m14:32:53.789166 [debug] [Thread-1 (]: Began executing node model.toast_model.mart_daily_revenue
+[0m14:32:53.802726 [debug] [Thread-1 (]: Writing runtime sql for node "model.toast_model.mart_daily_revenue"
+[0m14:32:53.803341 [debug] [Thread-1 (]: Using duckdb connection "model.toast_model.mart_daily_revenue"
+[0m14:32:53.803583 [debug] [Thread-1 (]: On model.toast_model.mart_daily_revenue: BEGIN
+[0m14:32:53.803796 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:32:53.804205 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m14:32:53.804433 [debug] [Thread-1 (]: Using duckdb connection "model.toast_model.mart_daily_revenue"
+[0m14:32:53.804663 [debug] [Thread-1 (]: On model.toast_model.mart_daily_revenue: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "toast_model", "target_name": "dev", "node_id": "model.toast_model.mart_daily_revenue"} */
+
+  
+    
+    
+
+    create  table
+      "dev"."main"."mart_daily_revenue__dbt_tmp"
+  
+    as (
+      
+
+SELECT
+    t.order_date,
+    r.city,
+    COUNT(t.transaction_id) as transactions,
+    SUM(t.total_amount) as daily_revenue,
+    AVG(t.total_amount) as avg_revenue
+FROM "dev"."main"."stg_transactions" t
+JOIN "dev"."main"."stg_restaurants" r ON t.restaurant_id = r.restaurant_id
+GROUP BY 1,2
+    );
+  
+  
+[0m14:32:53.834562 [debug] [Thread-1 (]: SQL status: OK in 0.030 seconds
+[0m14:32:53.838236 [debug] [Thread-1 (]: Using duckdb connection "model.toast_model.mart_daily_revenue"
+[0m14:32:53.838501 [debug] [Thread-1 (]: On model.toast_model.mart_daily_revenue: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "toast_model", "target_name": "dev", "node_id": "model.toast_model.mart_daily_revenue"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'mart_daily_revenue'
+  
+[0m14:32:53.839067 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m14:32:53.839838 [debug] [Thread-1 (]: Using duckdb connection "model.toast_model.mart_daily_revenue"
+[0m14:32:53.840075 [debug] [Thread-1 (]: On model.toast_model.mart_daily_revenue: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "toast_model", "target_name": "dev", "node_id": "model.toast_model.mart_daily_revenue"} */
+
+    SELECT COUNT(*) as remaining_indexes
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'mart_daily_revenue'
+  
+[0m14:32:53.840669 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m14:32:53.842963 [debug] [Thread-1 (]: Using duckdb connection "model.toast_model.mart_daily_revenue"
+[0m14:32:53.843261 [debug] [Thread-1 (]: On model.toast_model.mart_daily_revenue: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "toast_model", "target_name": "dev", "node_id": "model.toast_model.mart_daily_revenue"} */
+alter table "dev"."main"."mart_daily_revenue" rename to "mart_daily_revenue__dbt_backup"
+[0m14:32:53.844107 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m14:32:53.846134 [debug] [Thread-1 (]: Using duckdb connection "model.toast_model.mart_daily_revenue"
+[0m14:32:53.846379 [debug] [Thread-1 (]: On model.toast_model.mart_daily_revenue: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "toast_model", "target_name": "dev", "node_id": "model.toast_model.mart_daily_revenue"} */
+alter table "dev"."main"."mart_daily_revenue__dbt_tmp" rename to "mart_daily_revenue"
+[0m14:32:53.846765 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m14:32:53.850667 [debug] [Thread-1 (]: On model.toast_model.mart_daily_revenue: COMMIT
+[0m14:32:53.850916 [debug] [Thread-1 (]: Using duckdb connection "model.toast_model.mart_daily_revenue"
+[0m14:32:53.851134 [debug] [Thread-1 (]: On model.toast_model.mart_daily_revenue: COMMIT
+[0m14:32:53.852684 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m14:32:53.854335 [debug] [Thread-1 (]: Using duckdb connection "model.toast_model.mart_daily_revenue"
+[0m14:32:53.854575 [debug] [Thread-1 (]: On model.toast_model.mart_daily_revenue: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "toast_model", "target_name": "dev", "node_id": "model.toast_model.mart_daily_revenue"} */
+
+      drop table if exists "dev"."main"."mart_daily_revenue__dbt_backup" cascade
+    
+[0m14:32:53.855655 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m14:32:53.856508 [debug] [Thread-1 (]: On model.toast_model.mart_daily_revenue: Close
+[0m14:32:53.856876 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8f8f7937-51c5-4458-a489-c9399e0ef31d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11324cdc0>]}
+[0m14:32:53.857276 [info ] [Thread-1 (]: 3 of 5 OK created sql table model main.mart_daily_revenue ...................... [[32mOK[0m in 0.07s]
+[0m14:32:53.857635 [debug] [Thread-1 (]: Finished running node model.toast_model.mart_daily_revenue
+[0m14:32:53.857900 [debug] [Thread-1 (]: Began running node model.toast_model.mart_restaurant_metrics
+[0m14:32:53.858229 [info ] [Thread-1 (]: 4 of 5 START sql table model main.mart_restaurant_metrics ...................... [RUN]
+[0m14:32:53.858505 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.toast_model.mart_daily_revenue, now model.toast_model.mart_restaurant_metrics)
+[0m14:32:53.858734 [debug] [Thread-1 (]: Began compiling node model.toast_model.mart_restaurant_metrics
+[0m14:32:53.860802 [debug] [Thread-1 (]: Writing injected SQL for node "model.toast_model.mart_restaurant_metrics"
+[0m14:32:53.861215 [debug] [Thread-1 (]: Began executing node model.toast_model.mart_restaurant_metrics
+[0m14:32:53.863453 [debug] [Thread-1 (]: Writing runtime sql for node "model.toast_model.mart_restaurant_metrics"
+[0m14:32:53.864012 [debug] [Thread-1 (]: Using duckdb connection "model.toast_model.mart_restaurant_metrics"
+[0m14:32:53.864242 [debug] [Thread-1 (]: On model.toast_model.mart_restaurant_metrics: BEGIN
+[0m14:32:53.864465 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:32:53.864814 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m14:32:53.865040 [debug] [Thread-1 (]: Using duckdb connection "model.toast_model.mart_restaurant_metrics"
+[0m14:32:53.865274 [debug] [Thread-1 (]: On model.toast_model.mart_restaurant_metrics: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "toast_model", "target_name": "dev", "node_id": "model.toast_model.mart_restaurant_metrics"} */
+
+  
+    
+    
+
+    create  table
+      "dev"."main"."mart_restaurant_metrics__dbt_tmp"
+  
+    as (
+      
+
+WITH restaurant_stats AS (
+    SELECT
+        r.city,
+        r.category,
+        AVG(r.avg_rating) as avg_city_rating,
+        AVG(r.seats) as avg_seats,
+        COUNT(DISTINCT r.restaurant_id) as restaurant_count,
+        COUNT(t.transaction_id) as total_transactions,
+        SUM(t.total_amount) as total_revenue
+    FROM "dev"."main"."stg_restaurants" r
+    LEFT JOIN "dev"."main"."stg_transactions" t ON r.restaurant_id = t.restaurant_id
+    GROUP BY 1,2
+)
+SELECT *
+FROM restaurant_stats
+    );
+  
+  
+[0m14:32:53.870391 [debug] [Thread-1 (]: SQL status: OK in 0.005 seconds
+[0m14:32:53.871232 [debug] [Thread-1 (]: Using duckdb connection "model.toast_model.mart_restaurant_metrics"
+[0m14:32:53.871497 [debug] [Thread-1 (]: On model.toast_model.mart_restaurant_metrics: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "toast_model", "target_name": "dev", "node_id": "model.toast_model.mart_restaurant_metrics"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'mart_restaurant_metrics'
+  
+[0m14:32:53.872021 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m14:32:53.872772 [debug] [Thread-1 (]: Using duckdb connection "model.toast_model.mart_restaurant_metrics"
+[0m14:32:53.873016 [debug] [Thread-1 (]: On model.toast_model.mart_restaurant_metrics: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "toast_model", "target_name": "dev", "node_id": "model.toast_model.mart_restaurant_metrics"} */
+
+    SELECT COUNT(*) as remaining_indexes
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'mart_restaurant_metrics'
+  
+[0m14:32:53.873538 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m14:32:53.875622 [debug] [Thread-1 (]: Using duckdb connection "model.toast_model.mart_restaurant_metrics"
+[0m14:32:53.875872 [debug] [Thread-1 (]: On model.toast_model.mart_restaurant_metrics: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "toast_model", "target_name": "dev", "node_id": "model.toast_model.mart_restaurant_metrics"} */
+alter table "dev"."main"."mart_restaurant_metrics" rename to "mart_restaurant_metrics__dbt_backup"
+[0m14:32:53.876255 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m14:32:53.878157 [debug] [Thread-1 (]: Using duckdb connection "model.toast_model.mart_restaurant_metrics"
+[0m14:32:53.878387 [debug] [Thread-1 (]: On model.toast_model.mart_restaurant_metrics: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "toast_model", "target_name": "dev", "node_id": "model.toast_model.mart_restaurant_metrics"} */
+alter table "dev"."main"."mart_restaurant_metrics__dbt_tmp" rename to "mart_restaurant_metrics"
+[0m14:32:53.878755 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m14:32:53.879739 [debug] [Thread-1 (]: On model.toast_model.mart_restaurant_metrics: COMMIT
+[0m14:32:53.879975 [debug] [Thread-1 (]: Using duckdb connection "model.toast_model.mart_restaurant_metrics"
+[0m14:32:53.880200 [debug] [Thread-1 (]: On model.toast_model.mart_restaurant_metrics: COMMIT
+[0m14:32:53.880706 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m14:32:53.882571 [debug] [Thread-1 (]: Using duckdb connection "model.toast_model.mart_restaurant_metrics"
+[0m14:32:53.882863 [debug] [Thread-1 (]: On model.toast_model.mart_restaurant_metrics: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "toast_model", "target_name": "dev", "node_id": "model.toast_model.mart_restaurant_metrics"} */
+
+      drop table if exists "dev"."main"."mart_restaurant_metrics__dbt_backup" cascade
+    
+[0m14:32:53.883380 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m14:32:53.884134 [debug] [Thread-1 (]: On model.toast_model.mart_restaurant_metrics: Close
+[0m14:32:53.884490 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8f8f7937-51c5-4458-a489-c9399e0ef31d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1132ab580>]}
+[0m14:32:53.884903 [info ] [Thread-1 (]: 4 of 5 OK created sql table model main.mart_restaurant_metrics ................. [[32mOK[0m in 0.03s]
+[0m14:32:53.885277 [debug] [Thread-1 (]: Finished running node model.toast_model.mart_restaurant_metrics
+[0m14:32:53.885541 [debug] [Thread-1 (]: Began running node model.toast_model.mart_top_performers
+[0m14:32:53.885882 [info ] [Thread-1 (]: 5 of 5 START sql table model main.mart_top_performers .......................... [RUN]
+[0m14:32:53.886161 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.toast_model.mart_restaurant_metrics, now model.toast_model.mart_top_performers)
+[0m14:32:53.886389 [debug] [Thread-1 (]: Began compiling node model.toast_model.mart_top_performers
+[0m14:32:53.889472 [debug] [Thread-1 (]: Writing injected SQL for node "model.toast_model.mart_top_performers"
+[0m14:32:53.890205 [debug] [Thread-1 (]: Began executing node model.toast_model.mart_top_performers
+[0m14:32:53.892435 [debug] [Thread-1 (]: Writing runtime sql for node "model.toast_model.mart_top_performers"
+[0m14:32:53.893073 [debug] [Thread-1 (]: Using duckdb connection "model.toast_model.mart_top_performers"
+[0m14:32:53.893302 [debug] [Thread-1 (]: On model.toast_model.mart_top_performers: BEGIN
+[0m14:32:53.893503 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:32:53.893865 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m14:32:53.894087 [debug] [Thread-1 (]: Using duckdb connection "model.toast_model.mart_top_performers"
+[0m14:32:53.894319 [debug] [Thread-1 (]: On model.toast_model.mart_top_performers: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "toast_model", "target_name": "dev", "node_id": "model.toast_model.mart_top_performers"} */
+
+  
+    
+    
+
+    create  table
+      "dev"."main"."mart_top_performers__dbt_tmp"
+  
+    as (
+      
+
+WITH revenue AS (
+    SELECT
+        r.restaurant_id,
+        SUM(t.total_amount) as total_revenue
+    FROM "dev"."main"."stg_restaurants" r
+    LEFT JOIN "dev"."main"."stg_transactions" t ON r.restaurant_id = t.restaurant_id
+    GROUP BY 1
+)
+SELECT
+    r.city,
+    r.name,
+    rv.total_revenue,
+    RANK() OVER (PARTITION BY r.city ORDER BY rv.total_revenue DESC) as city_rank
+FROM revenue rv
+JOIN "dev"."main"."stg_restaurants" r ON r.restaurant_id = rv.restaurant_id
+WHERE rv.total_revenue > 0
+    );
+  
+  
+[0m14:32:53.907217 [debug] [Thread-1 (]: SQL status: OK in 0.013 seconds
+[0m14:32:53.907935 [debug] [Thread-1 (]: Using duckdb connection "model.toast_model.mart_top_performers"
+[0m14:32:53.908186 [debug] [Thread-1 (]: On model.toast_model.mart_top_performers: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "toast_model", "target_name": "dev", "node_id": "model.toast_model.mart_top_performers"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'mart_top_performers'
+  
+[0m14:32:53.908699 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m14:32:53.909463 [debug] [Thread-1 (]: Using duckdb connection "model.toast_model.mart_top_performers"
+[0m14:32:53.909695 [debug] [Thread-1 (]: On model.toast_model.mart_top_performers: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "toast_model", "target_name": "dev", "node_id": "model.toast_model.mart_top_performers"} */
+
+    SELECT COUNT(*) as remaining_indexes
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'mart_top_performers'
+  
+[0m14:32:53.910205 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m14:32:53.912417 [debug] [Thread-1 (]: Using duckdb connection "model.toast_model.mart_top_performers"
+[0m14:32:53.912672 [debug] [Thread-1 (]: On model.toast_model.mart_top_performers: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "toast_model", "target_name": "dev", "node_id": "model.toast_model.mart_top_performers"} */
+alter table "dev"."main"."mart_top_performers" rename to "mart_top_performers__dbt_backup"
+[0m14:32:53.913074 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m14:32:53.914946 [debug] [Thread-1 (]: Using duckdb connection "model.toast_model.mart_top_performers"
+[0m14:32:53.915178 [debug] [Thread-1 (]: On model.toast_model.mart_top_performers: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "toast_model", "target_name": "dev", "node_id": "model.toast_model.mart_top_performers"} */
+alter table "dev"."main"."mart_top_performers__dbt_tmp" rename to "mart_top_performers"
+[0m14:32:53.915542 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m14:32:53.916579 [debug] [Thread-1 (]: On model.toast_model.mart_top_performers: COMMIT
+[0m14:32:53.916802 [debug] [Thread-1 (]: Using duckdb connection "model.toast_model.mart_top_performers"
+[0m14:32:53.917006 [debug] [Thread-1 (]: On model.toast_model.mart_top_performers: COMMIT
+[0m14:32:53.917478 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m14:32:53.919150 [debug] [Thread-1 (]: Using duckdb connection "model.toast_model.mart_top_performers"
+[0m14:32:53.919392 [debug] [Thread-1 (]: On model.toast_model.mart_top_performers: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "toast_model", "target_name": "dev", "node_id": "model.toast_model.mart_top_performers"} */
+
+      drop table if exists "dev"."main"."mart_top_performers__dbt_backup" cascade
+    
+[0m14:32:53.919842 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m14:32:53.920602 [debug] [Thread-1 (]: On model.toast_model.mart_top_performers: Close
+[0m14:32:53.920968 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8f8f7937-51c5-4458-a489-c9399e0ef31d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11324cdc0>]}
+[0m14:32:53.921367 [info ] [Thread-1 (]: 5 of 5 OK created sql table model main.mart_top_performers ..................... [[32mOK[0m in 0.03s]
+[0m14:32:53.921724 [debug] [Thread-1 (]: Finished running node model.toast_model.mart_top_performers
+[0m14:32:53.922479 [debug] [MainThread]: Using duckdb connection "master"
+[0m14:32:53.922717 [debug] [MainThread]: On master: BEGIN
+[0m14:32:53.922914 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m14:32:53.923256 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m14:32:53.923454 [debug] [MainThread]: On master: COMMIT
+[0m14:32:53.923644 [debug] [MainThread]: Using duckdb connection "master"
+[0m14:32:53.923823 [debug] [MainThread]: On master: COMMIT
+[0m14:32:53.924200 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m14:32:53.924412 [debug] [MainThread]: On master: Close
+[0m14:32:53.924661 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m14:32:53.924852 [debug] [MainThread]: Connection 'model.toast_model.mart_top_performers' was properly closed.
+[0m14:32:53.925122 [info ] [MainThread]: 
+[0m14:32:53.925351 [info ] [MainThread]: Finished running 3 table models, 2 view models in 0 hours 0 minutes and 0.36 seconds (0.36s).
+[0m14:32:53.926105 [debug] [MainThread]: Command end result
+[0m14:32:53.944223 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/chaupham/PycharmProjects/toast_dbt_project/target/manifest.json
+[0m14:32:53.945257 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/chaupham/PycharmProjects/toast_dbt_project/target/semantic_manifest.json
+[0m14:32:53.950177 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/chaupham/PycharmProjects/toast_dbt_project/target/run_results.json
+[0m14:32:53.950431 [info ] [MainThread]: 
+[0m14:32:53.950700 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m14:32:53.950905 [info ] [MainThread]: 
+[0m14:32:53.951127 [info ] [MainThread]: Done. PASS=5 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=5
+[0m14:32:53.954282 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 1.2295682, "process_in_blocks": "0", "process_kernel_time": 0.604853, "process_mem_max_rss": "159928320", "process_out_blocks": "0", "process_user_time": 1.717742}
+[0m14:32:53.954607 [debug] [MainThread]: Command `dbt run` succeeded at 14:32:53.954539 after 1.23 seconds
+[0m14:32:53.954865 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11165cf70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111ec7d90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1126b1c00>]}
+[0m14:32:53.955104 [debug] [MainThread]: Flushing usage events
+[0m14:32:55.266577 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:33:00.885778 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111fa4f40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112eacfa0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112eac850>]}
+
+
+============================== 14:33:00.891020 | e2b4c029-f0c9-4fcb-966e-cdf2b01a147b ==============================
+[0m14:33:00.891020 [info ] [MainThread]: Running with dbt=1.11.3
+[0m14:33:00.891446 [debug] [MainThread]: running dbt with arguments {'fail_fast': 'False', 'target_path': 'None', 'quiet': 'False', 'profiles_dir': '/Users/chaupham/.dbt', 'empty': 'None', 'indirect_selection': 'eager', 'static_parser': 'True', 'version_check': 'True', 'warn_error': 'None', 'no_print': 'None', 'write_json': 'True', 'introspect': 'True', 'log_path': '/Users/chaupham/PycharmProjects/toast_dbt_project/logs', 'log_cache_events': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'cache_selected_only': 'False', 'printer_width': '80', 'use_colors': 'True', 'log_format': 'default', 'use_experimental_parser': 'False', 'send_anonymous_usage_stats': 'True', 'debug': 'False', 'invocation_command': 'dbt test', 'partial_parse': 'True'}
+[0m14:33:01.059623 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'e2b4c029-f0c9-4fcb-966e-cdf2b01a147b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11275ff40>]}
+[0m14:33:01.101150 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'e2b4c029-f0c9-4fcb-966e-cdf2b01a147b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112ead810>]}
+[0m14:33:01.102937 [info ] [MainThread]: Registered adapter: duckdb=1.10.0
+[0m14:33:01.181595 [debug] [MainThread]: checksum: 97dbd983c77ef3cec7304d97135f72c53ee20ea7ab68d67bae8e0876ff0fcdb6, vars: {}, profile: , target: , version: 1.11.3
+[0m14:33:01.310388 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m14:33:01.310711 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m14:33:01.310932 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m14:33:01.362247 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'e2b4c029-f0c9-4fcb-966e-cdf2b01a147b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1134370d0>]}
+[0m14:33:01.481152 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/chaupham/PycharmProjects/toast_dbt_project/target/manifest.json
+[0m14:33:01.482694 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/chaupham/PycharmProjects/toast_dbt_project/target/semantic_manifest.json
+[0m14:33:01.502026 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'e2b4c029-f0c9-4fcb-966e-cdf2b01a147b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1135c76a0>]}
+[0m14:33:01.502417 [info ] [MainThread]: Found 2 seeds, 5 models, 10 data tests, 2 sources, 472 macros
+[0m14:33:01.502671 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e2b4c029-f0c9-4fcb-966e-cdf2b01a147b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1135630d0>]}
+[0m14:33:01.504021 [info ] [MainThread]: 
+[0m14:33:01.504265 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m14:33:01.504457 [info ] [MainThread]: 
+[0m14:33:01.504783 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m14:33:01.508454 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_dev_main_raw'
+[0m14:33:01.540189 [debug] [ThreadPool]: Using duckdb connection "list_dev_main_raw"
+[0m14:33:01.540453 [debug] [ThreadPool]: On list_dev_main_raw: BEGIN
+[0m14:33:01.540646 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:33:01.552314 [debug] [ThreadPool]: SQL status: OK in 0.011 seconds
+[0m14:33:01.552602 [debug] [ThreadPool]: Using duckdb connection "list_dev_main_raw"
+[0m14:33:01.552817 [debug] [ThreadPool]: On list_dev_main_raw: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "toast_model", "target_name": "dev", "connection_name": "list_dev_main_raw"} */
+select
+      'dev' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main_raw'
+    and lower(table_catalog) = 'dev'
+  
+[0m14:33:01.567968 [debug] [ThreadPool]: SQL status: OK in 0.015 seconds
+[0m14:33:01.569472 [debug] [ThreadPool]: On list_dev_main_raw: ROLLBACK
+[0m14:33:01.570182 [debug] [ThreadPool]: Failed to rollback 'list_dev_main_raw'
+[0m14:33:01.570407 [debug] [ThreadPool]: On list_dev_main_raw: Close
+[0m14:33:01.570805 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dev_main_raw, now list_dev_main)
+[0m14:33:01.572695 [debug] [ThreadPool]: Using duckdb connection "list_dev_main"
+[0m14:33:01.572905 [debug] [ThreadPool]: On list_dev_main: BEGIN
+[0m14:33:01.573077 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m14:33:01.573414 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m14:33:01.573602 [debug] [ThreadPool]: Using duckdb connection "list_dev_main"
+[0m14:33:01.573804 [debug] [ThreadPool]: On list_dev_main: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "toast_model", "target_name": "dev", "connection_name": "list_dev_main"} */
+select
+      'dev' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'dev'
+  
+[0m14:33:01.575877 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m14:33:01.576718 [debug] [ThreadPool]: On list_dev_main: ROLLBACK
+[0m14:33:01.576982 [debug] [ThreadPool]: Failed to rollback 'list_dev_main'
+[0m14:33:01.577168 [debug] [ThreadPool]: On list_dev_main: Close
+[0m14:33:01.578020 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e2b4c029-f0c9-4fcb-966e-cdf2b01a147b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112e73d30>]}
+[0m14:33:01.578327 [debug] [MainThread]: Using duckdb connection "master"
+[0m14:33:01.578513 [debug] [MainThread]: On master: BEGIN
+[0m14:33:01.578684 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m14:33:01.579008 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m14:33:01.579186 [debug] [MainThread]: On master: COMMIT
+[0m14:33:01.579357 [debug] [MainThread]: Using duckdb connection "master"
+[0m14:33:01.579524 [debug] [MainThread]: On master: COMMIT
+[0m14:33:01.579781 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m14:33:01.579967 [debug] [MainThread]: On master: Close
+[0m14:33:01.581668 [debug] [Thread-1 (]: Began running node test.toast_model.accepted_values_stg_restaurants_category__Full_Service__Fine_Dining__Fast_Food.07a61d2c4a
+[0m14:33:01.581936 [info ] [Thread-1 (]: 1 of 10 START test accepted_values_stg_restaurants_category__Full_Service__Fine_Dining__Fast_Food  [RUN]
+[0m14:33:01.582228 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_dev_main, now test.toast_model.accepted_values_stg_restaurants_category__Full_Service__Fine_Dining__Fast_Food.07a61d2c4a)
+[0m14:33:01.582552 [debug] [Thread-1 (]: Began compiling node test.toast_model.accepted_values_stg_restaurants_category__Full_Service__Fine_Dining__Fast_Food.07a61d2c4a
+[0m14:33:01.594306 [debug] [Thread-1 (]: Writing injected SQL for node "test.toast_model.accepted_values_stg_restaurants_category__Full_Service__Fine_Dining__Fast_Food.07a61d2c4a"
+[0m14:33:01.594762 [debug] [Thread-1 (]: Began executing node test.toast_model.accepted_values_stg_restaurants_category__Full_Service__Fine_Dining__Fast_Food.07a61d2c4a
+[0m14:33:01.608124 [debug] [Thread-1 (]: Writing runtime sql for node "test.toast_model.accepted_values_stg_restaurants_category__Full_Service__Fine_Dining__Fast_Food.07a61d2c4a"
+[0m14:33:01.608790 [debug] [Thread-1 (]: Using duckdb connection "test.toast_model.accepted_values_stg_restaurants_category__Full_Service__Fine_Dining__Fast_Food.07a61d2c4a"
+[0m14:33:01.609050 [debug] [Thread-1 (]: On test.toast_model.accepted_values_stg_restaurants_category__Full_Service__Fine_Dining__Fast_Food.07a61d2c4a: BEGIN
+[0m14:33:01.609281 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:33:01.609691 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m14:33:01.609917 [debug] [Thread-1 (]: Using duckdb connection "test.toast_model.accepted_values_stg_restaurants_category__Full_Service__Fine_Dining__Fast_Food.07a61d2c4a"
+[0m14:33:01.610177 [debug] [Thread-1 (]: On test.toast_model.accepted_values_stg_restaurants_category__Full_Service__Fine_Dining__Fast_Food.07a61d2c4a: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "toast_model", "target_name": "dev", "node_id": "test.toast_model.accepted_values_stg_restaurants_category__Full_Service__Fine_Dining__Fast_Food.07a61d2c4a"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with all_values as (
+
+    select
+        category as value_field,
+        count(*) as n_records
+
+    from "dev"."main"."stg_restaurants"
+    group by category
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'Full Service','Fine Dining','Fast Food'
+)
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m14:33:01.614247 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m14:33:01.617236 [debug] [Thread-1 (]: On test.toast_model.accepted_values_stg_restaurants_category__Full_Service__Fine_Dining__Fast_Food.07a61d2c4a: ROLLBACK
+[0m14:33:01.617564 [debug] [Thread-1 (]: Failed to rollback 'test.toast_model.accepted_values_stg_restaurants_category__Full_Service__Fine_Dining__Fast_Food.07a61d2c4a'
+[0m14:33:01.617802 [debug] [Thread-1 (]: On test.toast_model.accepted_values_stg_restaurants_category__Full_Service__Fine_Dining__Fast_Food.07a61d2c4a: Close
+[0m14:33:01.618212 [info ] [Thread-1 (]: 1 of 10 PASS accepted_values_stg_restaurants_category__Full_Service__Fine_Dining__Fast_Food  [[32mPASS[0m in 0.04s]
+[0m14:33:01.618626 [debug] [Thread-1 (]: Finished running node test.toast_model.accepted_values_stg_restaurants_category__Full_Service__Fine_Dining__Fast_Food.07a61d2c4a
+[0m14:33:01.618918 [debug] [Thread-1 (]: Began running node test.toast_model.assert_stg_transactions_total_amount_positive
+[0m14:33:01.619218 [info ] [Thread-1 (]: 2 of 10 START test assert_stg_transactions_total_amount_positive ............... [RUN]
+[0m14:33:01.619492 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.toast_model.accepted_values_stg_restaurants_category__Full_Service__Fine_Dining__Fast_Food.07a61d2c4a, now test.toast_model.assert_stg_transactions_total_amount_positive)
+[0m14:33:01.619731 [debug] [Thread-1 (]: Began compiling node test.toast_model.assert_stg_transactions_total_amount_positive
+[0m14:33:01.621764 [debug] [Thread-1 (]: Writing injected SQL for node "test.toast_model.assert_stg_transactions_total_amount_positive"
+[0m14:33:01.622367 [debug] [Thread-1 (]: Began executing node test.toast_model.assert_stg_transactions_total_amount_positive
+[0m14:33:01.624119 [debug] [Thread-1 (]: Writing runtime sql for node "test.toast_model.assert_stg_transactions_total_amount_positive"
+[0m14:33:01.624575 [debug] [Thread-1 (]: Using duckdb connection "test.toast_model.assert_stg_transactions_total_amount_positive"
+[0m14:33:01.624831 [debug] [Thread-1 (]: On test.toast_model.assert_stg_transactions_total_amount_positive: BEGIN
+[0m14:33:01.625062 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:33:01.625462 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m14:33:01.625697 [debug] [Thread-1 (]: Using duckdb connection "test.toast_model.assert_stg_transactions_total_amount_positive"
+[0m14:33:01.625949 [debug] [Thread-1 (]: On test.toast_model.assert_stg_transactions_total_amount_positive: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "toast_model", "target_name": "dev", "node_id": "test.toast_model.assert_stg_transactions_total_amount_positive"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+
+select
+    transaction_id,
+    total_amount
+from "dev"."main"."stg_transactions"
+where total_amount <= 0
+  
+  
+      
+    ) dbt_internal_test
+[0m14:33:01.627677 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m14:33:01.628595 [debug] [Thread-1 (]: On test.toast_model.assert_stg_transactions_total_amount_positive: ROLLBACK
+[0m14:33:01.628888 [debug] [Thread-1 (]: Failed to rollback 'test.toast_model.assert_stg_transactions_total_amount_positive'
+[0m14:33:01.629134 [debug] [Thread-1 (]: On test.toast_model.assert_stg_transactions_total_amount_positive: Close
+[0m14:33:01.629489 [info ] [Thread-1 (]: 2 of 10 PASS assert_stg_transactions_total_amount_positive ..................... [[32mPASS[0m in 0.01s]
+[0m14:33:01.629850 [debug] [Thread-1 (]: Finished running node test.toast_model.assert_stg_transactions_total_amount_positive
+[0m14:33:01.630111 [debug] [Thread-1 (]: Began running node test.toast_model.not_null_stg_restaurants_restaurant_id.df7b642a2f
+[0m14:33:01.630426 [info ] [Thread-1 (]: 3 of 10 START test not_null_stg_restaurants_restaurant_id ...................... [RUN]
+[0m14:33:01.630736 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.toast_model.assert_stg_transactions_total_amount_positive, now test.toast_model.not_null_stg_restaurants_restaurant_id.df7b642a2f)
+[0m14:33:01.630980 [debug] [Thread-1 (]: Began compiling node test.toast_model.not_null_stg_restaurants_restaurant_id.df7b642a2f
+[0m14:33:01.635503 [debug] [Thread-1 (]: Writing injected SQL for node "test.toast_model.not_null_stg_restaurants_restaurant_id.df7b642a2f"
+[0m14:33:01.636115 [debug] [Thread-1 (]: Began executing node test.toast_model.not_null_stg_restaurants_restaurant_id.df7b642a2f
+[0m14:33:01.637865 [debug] [Thread-1 (]: Writing runtime sql for node "test.toast_model.not_null_stg_restaurants_restaurant_id.df7b642a2f"
+[0m14:33:01.638259 [debug] [Thread-1 (]: Using duckdb connection "test.toast_model.not_null_stg_restaurants_restaurant_id.df7b642a2f"
+[0m14:33:01.638497 [debug] [Thread-1 (]: On test.toast_model.not_null_stg_restaurants_restaurant_id.df7b642a2f: BEGIN
+[0m14:33:01.638704 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:33:01.639059 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m14:33:01.639286 [debug] [Thread-1 (]: Using duckdb connection "test.toast_model.not_null_stg_restaurants_restaurant_id.df7b642a2f"
+[0m14:33:01.639511 [debug] [Thread-1 (]: On test.toast_model.not_null_stg_restaurants_restaurant_id.df7b642a2f: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "toast_model", "target_name": "dev", "node_id": "test.toast_model.not_null_stg_restaurants_restaurant_id.df7b642a2f"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select restaurant_id
+from "dev"."main"."stg_restaurants"
+where restaurant_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m14:33:01.640246 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m14:33:01.641108 [debug] [Thread-1 (]: On test.toast_model.not_null_stg_restaurants_restaurant_id.df7b642a2f: ROLLBACK
+[0m14:33:01.641384 [debug] [Thread-1 (]: Failed to rollback 'test.toast_model.not_null_stg_restaurants_restaurant_id.df7b642a2f'
+[0m14:33:01.641598 [debug] [Thread-1 (]: On test.toast_model.not_null_stg_restaurants_restaurant_id.df7b642a2f: Close
+[0m14:33:01.641929 [info ] [Thread-1 (]: 3 of 10 PASS not_null_stg_restaurants_restaurant_id ............................ [[32mPASS[0m in 0.01s]
+[0m14:33:01.642283 [debug] [Thread-1 (]: Finished running node test.toast_model.not_null_stg_restaurants_restaurant_id.df7b642a2f
+[0m14:33:01.642542 [debug] [Thread-1 (]: Began running node test.toast_model.not_null_stg_transactions_transaction_id.1d00a8e2e4
+[0m14:33:01.642807 [info ] [Thread-1 (]: 4 of 10 START test not_null_stg_transactions_transaction_id .................... [RUN]
+[0m14:33:01.643062 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.toast_model.not_null_stg_restaurants_restaurant_id.df7b642a2f, now test.toast_model.not_null_stg_transactions_transaction_id.1d00a8e2e4)
+[0m14:33:01.643296 [debug] [Thread-1 (]: Began compiling node test.toast_model.not_null_stg_transactions_transaction_id.1d00a8e2e4
+[0m14:33:01.645912 [debug] [Thread-1 (]: Writing injected SQL for node "test.toast_model.not_null_stg_transactions_transaction_id.1d00a8e2e4"
+[0m14:33:01.646311 [debug] [Thread-1 (]: Began executing node test.toast_model.not_null_stg_transactions_transaction_id.1d00a8e2e4
+[0m14:33:01.648177 [debug] [Thread-1 (]: Writing runtime sql for node "test.toast_model.not_null_stg_transactions_transaction_id.1d00a8e2e4"
+[0m14:33:01.648706 [debug] [Thread-1 (]: Using duckdb connection "test.toast_model.not_null_stg_transactions_transaction_id.1d00a8e2e4"
+[0m14:33:01.648964 [debug] [Thread-1 (]: On test.toast_model.not_null_stg_transactions_transaction_id.1d00a8e2e4: BEGIN
+[0m14:33:01.649192 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:33:01.650608 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m14:33:01.650843 [debug] [Thread-1 (]: Using duckdb connection "test.toast_model.not_null_stg_transactions_transaction_id.1d00a8e2e4"
+[0m14:33:01.651073 [debug] [Thread-1 (]: On test.toast_model.not_null_stg_transactions_transaction_id.1d00a8e2e4: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "toast_model", "target_name": "dev", "node_id": "test.toast_model.not_null_stg_transactions_transaction_id.1d00a8e2e4"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select transaction_id
+from "dev"."main"."stg_transactions"
+where transaction_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m14:33:01.651790 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m14:33:01.652713 [debug] [Thread-1 (]: On test.toast_model.not_null_stg_transactions_transaction_id.1d00a8e2e4: ROLLBACK
+[0m14:33:01.652990 [debug] [Thread-1 (]: Failed to rollback 'test.toast_model.not_null_stg_transactions_transaction_id.1d00a8e2e4'
+[0m14:33:01.653199 [debug] [Thread-1 (]: On test.toast_model.not_null_stg_transactions_transaction_id.1d00a8e2e4: Close
+[0m14:33:01.653533 [info ] [Thread-1 (]: 4 of 10 PASS not_null_stg_transactions_transaction_id .......................... [[32mPASS[0m in 0.01s]
+[0m14:33:01.653880 [debug] [Thread-1 (]: Finished running node test.toast_model.not_null_stg_transactions_transaction_id.1d00a8e2e4
+[0m14:33:01.654131 [debug] [Thread-1 (]: Began running node test.toast_model.source_not_null_main_raw_restaurants_restaurant_id.184596ceda
+[0m14:33:01.654386 [info ] [Thread-1 (]: 5 of 10 START test source_not_null_main_raw_restaurants_restaurant_id .......... [RUN]
+[0m14:33:01.654641 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.toast_model.not_null_stg_transactions_transaction_id.1d00a8e2e4, now test.toast_model.source_not_null_main_raw_restaurants_restaurant_id.184596ceda)
+[0m14:33:01.654872 [debug] [Thread-1 (]: Began compiling node test.toast_model.source_not_null_main_raw_restaurants_restaurant_id.184596ceda
+[0m14:33:01.657422 [debug] [Thread-1 (]: Writing injected SQL for node "test.toast_model.source_not_null_main_raw_restaurants_restaurant_id.184596ceda"
+[0m14:33:01.658085 [debug] [Thread-1 (]: Began executing node test.toast_model.source_not_null_main_raw_restaurants_restaurant_id.184596ceda
+[0m14:33:01.659855 [debug] [Thread-1 (]: Writing runtime sql for node "test.toast_model.source_not_null_main_raw_restaurants_restaurant_id.184596ceda"
+[0m14:33:01.660462 [debug] [Thread-1 (]: Using duckdb connection "test.toast_model.source_not_null_main_raw_restaurants_restaurant_id.184596ceda"
+[0m14:33:01.660710 [debug] [Thread-1 (]: On test.toast_model.source_not_null_main_raw_restaurants_restaurant_id.184596ceda: BEGIN
+[0m14:33:01.660931 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:33:01.661303 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m14:33:01.661538 [debug] [Thread-1 (]: Using duckdb connection "test.toast_model.source_not_null_main_raw_restaurants_restaurant_id.184596ceda"
+[0m14:33:01.661767 [debug] [Thread-1 (]: On test.toast_model.source_not_null_main_raw_restaurants_restaurant_id.184596ceda: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "toast_model", "target_name": "dev", "node_id": "test.toast_model.source_not_null_main_raw_restaurants_restaurant_id.184596ceda"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select restaurant_id
+from "dev"."main_raw"."restaurants"
+where restaurant_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m14:33:01.662328 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m14:33:01.663198 [debug] [Thread-1 (]: On test.toast_model.source_not_null_main_raw_restaurants_restaurant_id.184596ceda: ROLLBACK
+[0m14:33:01.663484 [debug] [Thread-1 (]: Failed to rollback 'test.toast_model.source_not_null_main_raw_restaurants_restaurant_id.184596ceda'
+[0m14:33:01.663716 [debug] [Thread-1 (]: On test.toast_model.source_not_null_main_raw_restaurants_restaurant_id.184596ceda: Close
+[0m14:33:01.664067 [info ] [Thread-1 (]: 5 of 10 PASS source_not_null_main_raw_restaurants_restaurant_id ................ [[32mPASS[0m in 0.01s]
+[0m14:33:01.664421 [debug] [Thread-1 (]: Finished running node test.toast_model.source_not_null_main_raw_restaurants_restaurant_id.184596ceda
+[0m14:33:01.664668 [debug] [Thread-1 (]: Began running node test.toast_model.source_not_null_main_raw_transactions_transaction_id.b984c6a8f5
+[0m14:33:01.664936 [info ] [Thread-1 (]: 6 of 10 START test source_not_null_main_raw_transactions_transaction_id ........ [RUN]
+[0m14:33:01.665198 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.toast_model.source_not_null_main_raw_restaurants_restaurant_id.184596ceda, now test.toast_model.source_not_null_main_raw_transactions_transaction_id.b984c6a8f5)
+[0m14:33:01.665431 [debug] [Thread-1 (]: Began compiling node test.toast_model.source_not_null_main_raw_transactions_transaction_id.b984c6a8f5
+[0m14:33:01.668020 [debug] [Thread-1 (]: Writing injected SQL for node "test.toast_model.source_not_null_main_raw_transactions_transaction_id.b984c6a8f5"
+[0m14:33:01.668679 [debug] [Thread-1 (]: Began executing node test.toast_model.source_not_null_main_raw_transactions_transaction_id.b984c6a8f5
+[0m14:33:01.670359 [debug] [Thread-1 (]: Writing runtime sql for node "test.toast_model.source_not_null_main_raw_transactions_transaction_id.b984c6a8f5"
+[0m14:33:01.670914 [debug] [Thread-1 (]: Using duckdb connection "test.toast_model.source_not_null_main_raw_transactions_transaction_id.b984c6a8f5"
+[0m14:33:01.671174 [debug] [Thread-1 (]: On test.toast_model.source_not_null_main_raw_transactions_transaction_id.b984c6a8f5: BEGIN
+[0m14:33:01.671416 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:33:01.671809 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m14:33:01.672049 [debug] [Thread-1 (]: Using duckdb connection "test.toast_model.source_not_null_main_raw_transactions_transaction_id.b984c6a8f5"
+[0m14:33:01.672297 [debug] [Thread-1 (]: On test.toast_model.source_not_null_main_raw_transactions_transaction_id.b984c6a8f5: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "toast_model", "target_name": "dev", "node_id": "test.toast_model.source_not_null_main_raw_transactions_transaction_id.b984c6a8f5"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select transaction_id
+from "dev"."main_raw"."transactions"
+where transaction_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m14:33:01.672858 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m14:33:01.673745 [debug] [Thread-1 (]: On test.toast_model.source_not_null_main_raw_transactions_transaction_id.b984c6a8f5: ROLLBACK
+[0m14:33:01.674065 [debug] [Thread-1 (]: Failed to rollback 'test.toast_model.source_not_null_main_raw_transactions_transaction_id.b984c6a8f5'
+[0m14:33:01.674334 [debug] [Thread-1 (]: On test.toast_model.source_not_null_main_raw_transactions_transaction_id.b984c6a8f5: Close
+[0m14:33:01.674720 [info ] [Thread-1 (]: 6 of 10 PASS source_not_null_main_raw_transactions_transaction_id .............. [[32mPASS[0m in 0.01s]
+[0m14:33:01.675089 [debug] [Thread-1 (]: Finished running node test.toast_model.source_not_null_main_raw_transactions_transaction_id.b984c6a8f5
+[0m14:33:01.675352 [debug] [Thread-1 (]: Began running node test.toast_model.source_unique_main_raw_restaurants_restaurant_id.fae10ec3f9
+[0m14:33:01.675651 [info ] [Thread-1 (]: 7 of 10 START test source_unique_main_raw_restaurants_restaurant_id ............ [RUN]
+[0m14:33:01.675942 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.toast_model.source_not_null_main_raw_transactions_transaction_id.b984c6a8f5, now test.toast_model.source_unique_main_raw_restaurants_restaurant_id.fae10ec3f9)
+[0m14:33:01.676187 [debug] [Thread-1 (]: Began compiling node test.toast_model.source_unique_main_raw_restaurants_restaurant_id.fae10ec3f9
+[0m14:33:01.680207 [debug] [Thread-1 (]: Writing injected SQL for node "test.toast_model.source_unique_main_raw_restaurants_restaurant_id.fae10ec3f9"
+[0m14:33:01.680808 [debug] [Thread-1 (]: Began executing node test.toast_model.source_unique_main_raw_restaurants_restaurant_id.fae10ec3f9
+[0m14:33:01.682540 [debug] [Thread-1 (]: Writing runtime sql for node "test.toast_model.source_unique_main_raw_restaurants_restaurant_id.fae10ec3f9"
+[0m14:33:01.683081 [debug] [Thread-1 (]: Using duckdb connection "test.toast_model.source_unique_main_raw_restaurants_restaurant_id.fae10ec3f9"
+[0m14:33:01.683318 [debug] [Thread-1 (]: On test.toast_model.source_unique_main_raw_restaurants_restaurant_id.fae10ec3f9: BEGIN
+[0m14:33:01.683528 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:33:01.683875 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m14:33:01.684107 [debug] [Thread-1 (]: Using duckdb connection "test.toast_model.source_unique_main_raw_restaurants_restaurant_id.fae10ec3f9"
+[0m14:33:01.684335 [debug] [Thread-1 (]: On test.toast_model.source_unique_main_raw_restaurants_restaurant_id.fae10ec3f9: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "toast_model", "target_name": "dev", "node_id": "test.toast_model.source_unique_main_raw_restaurants_restaurant_id.fae10ec3f9"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    restaurant_id as unique_field,
+    count(*) as n_records
+
+from "dev"."main_raw"."restaurants"
+where restaurant_id is not null
+group by restaurant_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m14:33:01.687560 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m14:33:01.688472 [debug] [Thread-1 (]: On test.toast_model.source_unique_main_raw_restaurants_restaurant_id.fae10ec3f9: ROLLBACK
+[0m14:33:01.688753 [debug] [Thread-1 (]: Failed to rollback 'test.toast_model.source_unique_main_raw_restaurants_restaurant_id.fae10ec3f9'
+[0m14:33:01.688974 [debug] [Thread-1 (]: On test.toast_model.source_unique_main_raw_restaurants_restaurant_id.fae10ec3f9: Close
+[0m14:33:01.689309 [info ] [Thread-1 (]: 7 of 10 PASS source_unique_main_raw_restaurants_restaurant_id .................. [[32mPASS[0m in 0.01s]
+[0m14:33:01.689663 [debug] [Thread-1 (]: Finished running node test.toast_model.source_unique_main_raw_restaurants_restaurant_id.fae10ec3f9
+[0m14:33:01.689934 [debug] [Thread-1 (]: Began running node test.toast_model.source_unique_main_raw_transactions_transaction_id.ca6743344a
+[0m14:33:01.690201 [info ] [Thread-1 (]: 8 of 10 START test source_unique_main_raw_transactions_transaction_id .......... [RUN]
+[0m14:33:01.690464 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.toast_model.source_unique_main_raw_restaurants_restaurant_id.fae10ec3f9, now test.toast_model.source_unique_main_raw_transactions_transaction_id.ca6743344a)
+[0m14:33:01.690695 [debug] [Thread-1 (]: Began compiling node test.toast_model.source_unique_main_raw_transactions_transaction_id.ca6743344a
+[0m14:33:01.694132 [debug] [Thread-1 (]: Writing injected SQL for node "test.toast_model.source_unique_main_raw_transactions_transaction_id.ca6743344a"
+[0m14:33:01.694531 [debug] [Thread-1 (]: Began executing node test.toast_model.source_unique_main_raw_transactions_transaction_id.ca6743344a
+[0m14:33:01.696175 [debug] [Thread-1 (]: Writing runtime sql for node "test.toast_model.source_unique_main_raw_transactions_transaction_id.ca6743344a"
+[0m14:33:01.696604 [debug] [Thread-1 (]: Using duckdb connection "test.toast_model.source_unique_main_raw_transactions_transaction_id.ca6743344a"
+[0m14:33:01.696857 [debug] [Thread-1 (]: On test.toast_model.source_unique_main_raw_transactions_transaction_id.ca6743344a: BEGIN
+[0m14:33:01.697091 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:33:01.697497 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m14:33:01.697733 [debug] [Thread-1 (]: Using duckdb connection "test.toast_model.source_unique_main_raw_transactions_transaction_id.ca6743344a"
+[0m14:33:01.697990 [debug] [Thread-1 (]: On test.toast_model.source_unique_main_raw_transactions_transaction_id.ca6743344a: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "toast_model", "target_name": "dev", "node_id": "test.toast_model.source_unique_main_raw_transactions_transaction_id.ca6743344a"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    transaction_id as unique_field,
+    count(*) as n_records
+
+from "dev"."main_raw"."transactions"
+where transaction_id is not null
+group by transaction_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m14:33:01.699212 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m14:33:01.700302 [debug] [Thread-1 (]: On test.toast_model.source_unique_main_raw_transactions_transaction_id.ca6743344a: ROLLBACK
+[0m14:33:01.700587 [debug] [Thread-1 (]: Failed to rollback 'test.toast_model.source_unique_main_raw_transactions_transaction_id.ca6743344a'
+[0m14:33:01.700807 [debug] [Thread-1 (]: On test.toast_model.source_unique_main_raw_transactions_transaction_id.ca6743344a: Close
+[0m14:33:01.701151 [info ] [Thread-1 (]: 8 of 10 PASS source_unique_main_raw_transactions_transaction_id ................ [[32mPASS[0m in 0.01s]
+[0m14:33:01.701518 [debug] [Thread-1 (]: Finished running node test.toast_model.source_unique_main_raw_transactions_transaction_id.ca6743344a
+[0m14:33:01.701791 [debug] [Thread-1 (]: Began running node test.toast_model.unique_stg_restaurants_restaurant_id.73cc1fe322
+[0m14:33:01.702069 [info ] [Thread-1 (]: 9 of 10 START test unique_stg_restaurants_restaurant_id ........................ [RUN]
+[0m14:33:01.702344 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.toast_model.source_unique_main_raw_transactions_transaction_id.ca6743344a, now test.toast_model.unique_stg_restaurants_restaurant_id.73cc1fe322)
+[0m14:33:01.702584 [debug] [Thread-1 (]: Began compiling node test.toast_model.unique_stg_restaurants_restaurant_id.73cc1fe322
+[0m14:33:01.705195 [debug] [Thread-1 (]: Writing injected SQL for node "test.toast_model.unique_stg_restaurants_restaurant_id.73cc1fe322"
+[0m14:33:01.705782 [debug] [Thread-1 (]: Began executing node test.toast_model.unique_stg_restaurants_restaurant_id.73cc1fe322
+[0m14:33:01.707472 [debug] [Thread-1 (]: Writing runtime sql for node "test.toast_model.unique_stg_restaurants_restaurant_id.73cc1fe322"
+[0m14:33:01.707884 [debug] [Thread-1 (]: Using duckdb connection "test.toast_model.unique_stg_restaurants_restaurant_id.73cc1fe322"
+[0m14:33:01.708121 [debug] [Thread-1 (]: On test.toast_model.unique_stg_restaurants_restaurant_id.73cc1fe322: BEGIN
+[0m14:33:01.708338 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:33:01.708703 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m14:33:01.708928 [debug] [Thread-1 (]: Using duckdb connection "test.toast_model.unique_stg_restaurants_restaurant_id.73cc1fe322"
+[0m14:33:01.709173 [debug] [Thread-1 (]: On test.toast_model.unique_stg_restaurants_restaurant_id.73cc1fe322: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "toast_model", "target_name": "dev", "node_id": "test.toast_model.unique_stg_restaurants_restaurant_id.73cc1fe322"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    restaurant_id as unique_field,
+    count(*) as n_records
+
+from "dev"."main"."stg_restaurants"
+where restaurant_id is not null
+group by restaurant_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m14:33:01.710198 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m14:33:01.711077 [debug] [Thread-1 (]: On test.toast_model.unique_stg_restaurants_restaurant_id.73cc1fe322: ROLLBACK
+[0m14:33:01.711362 [debug] [Thread-1 (]: Failed to rollback 'test.toast_model.unique_stg_restaurants_restaurant_id.73cc1fe322'
+[0m14:33:01.711582 [debug] [Thread-1 (]: On test.toast_model.unique_stg_restaurants_restaurant_id.73cc1fe322: Close
+[0m14:33:01.711922 [info ] [Thread-1 (]: 9 of 10 PASS unique_stg_restaurants_restaurant_id .............................. [[32mPASS[0m in 0.01s]
+[0m14:33:01.712274 [debug] [Thread-1 (]: Finished running node test.toast_model.unique_stg_restaurants_restaurant_id.73cc1fe322
+[0m14:33:01.712529 [debug] [Thread-1 (]: Began running node test.toast_model.unique_stg_transactions_transaction_id.ee9a78a396
+[0m14:33:01.712820 [info ] [Thread-1 (]: 10 of 10 START test unique_stg_transactions_transaction_id ..................... [RUN]
+[0m14:33:01.713105 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.toast_model.unique_stg_restaurants_restaurant_id.73cc1fe322, now test.toast_model.unique_stg_transactions_transaction_id.ee9a78a396)
+[0m14:33:01.713339 [debug] [Thread-1 (]: Began compiling node test.toast_model.unique_stg_transactions_transaction_id.ee9a78a396
+[0m14:33:01.715886 [debug] [Thread-1 (]: Writing injected SQL for node "test.toast_model.unique_stg_transactions_transaction_id.ee9a78a396"
+[0m14:33:01.716258 [debug] [Thread-1 (]: Began executing node test.toast_model.unique_stg_transactions_transaction_id.ee9a78a396
+[0m14:33:01.717927 [debug] [Thread-1 (]: Writing runtime sql for node "test.toast_model.unique_stg_transactions_transaction_id.ee9a78a396"
+[0m14:33:01.718518 [debug] [Thread-1 (]: Using duckdb connection "test.toast_model.unique_stg_transactions_transaction_id.ee9a78a396"
+[0m14:33:01.718767 [debug] [Thread-1 (]: On test.toast_model.unique_stg_transactions_transaction_id.ee9a78a396: BEGIN
+[0m14:33:01.718991 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:33:01.719360 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m14:33:01.719588 [debug] [Thread-1 (]: Using duckdb connection "test.toast_model.unique_stg_transactions_transaction_id.ee9a78a396"
+[0m14:33:01.719832 [debug] [Thread-1 (]: On test.toast_model.unique_stg_transactions_transaction_id.ee9a78a396: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "toast_model", "target_name": "dev", "node_id": "test.toast_model.unique_stg_transactions_transaction_id.ee9a78a396"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    transaction_id as unique_field,
+    count(*) as n_records
+
+from "dev"."main"."stg_transactions"
+where transaction_id is not null
+group by transaction_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m14:33:01.720935 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m14:33:01.721889 [debug] [Thread-1 (]: On test.toast_model.unique_stg_transactions_transaction_id.ee9a78a396: ROLLBACK
+[0m14:33:01.722199 [debug] [Thread-1 (]: Failed to rollback 'test.toast_model.unique_stg_transactions_transaction_id.ee9a78a396'
+[0m14:33:01.722421 [debug] [Thread-1 (]: On test.toast_model.unique_stg_transactions_transaction_id.ee9a78a396: Close
+[0m14:33:01.722765 [info ] [Thread-1 (]: 10 of 10 PASS unique_stg_transactions_transaction_id ........................... [[32mPASS[0m in 0.01s]
+[0m14:33:01.723122 [debug] [Thread-1 (]: Finished running node test.toast_model.unique_stg_transactions_transaction_id.ee9a78a396
+[0m14:33:01.723828 [debug] [MainThread]: Using duckdb connection "master"
+[0m14:33:01.724039 [debug] [MainThread]: On master: BEGIN
+[0m14:33:01.724206 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m14:33:01.724509 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m14:33:01.724702 [debug] [MainThread]: On master: COMMIT
+[0m14:33:01.724879 [debug] [MainThread]: Using duckdb connection "master"
+[0m14:33:01.725041 [debug] [MainThread]: On master: COMMIT
+[0m14:33:01.725291 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m14:33:01.725475 [debug] [MainThread]: On master: Close
+[0m14:33:01.725698 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m14:33:01.725884 [debug] [MainThread]: Connection 'test.toast_model.unique_stg_transactions_transaction_id.ee9a78a396' was properly closed.
+[0m14:33:01.726096 [info ] [MainThread]: 
+[0m14:33:01.726294 [info ] [MainThread]: Finished running 10 data tests in 0 hours 0 minutes and 0.22 seconds (0.22s).
+[0m14:33:01.727393 [debug] [MainThread]: Command end result
+[0m14:33:01.745721 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/chaupham/PycharmProjects/toast_dbt_project/target/manifest.json
+[0m14:33:01.747065 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/chaupham/PycharmProjects/toast_dbt_project/target/semantic_manifest.json
+[0m14:33:01.752337 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/chaupham/PycharmProjects/toast_dbt_project/target/run_results.json
+[0m14:33:01.752575 [info ] [MainThread]: 
+[0m14:33:01.752833 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m14:33:01.753039 [info ] [MainThread]: 
+[0m14:33:01.753257 [info ] [MainThread]: Done. PASS=10 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=10
+[0m14:33:01.755687 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": true, "command_wall_clock_time": 0.9511114, "process_in_blocks": "0", "process_kernel_time": 0.206577, "process_mem_max_rss": "152502272", "process_out_blocks": "0", "process_user_time": 1.660334}
+[0m14:33:01.755983 [debug] [MainThread]: Command `dbt test` succeeded at 14:33:01.755928 after 0.95 seconds
+[0m14:33:01.756224 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111fa4f40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11204afb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1121261a0>]}
+[0m14:33:01.756461 [debug] [MainThread]: Flushing usage events
+[0m14:33:01.885899 [debug] [MainThread]: An error was encountered while trying to flush usage events
